@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>X-ray Classification Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>X-ray Classification Results</h1>
+    <div class="result">
+        <h2>Бактериальная пневмония</h2>
+        <ul>
+            {% for filename in results["Бактериальная пневмония"] %}
+                <li>{{ filename }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="result">
+        <h2>Вирусная пневмония</h2>
+        <ul>
+            {% for filename in results["Вирусная пневмония"] %}
+                <li>{{ filename }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="result">
+        <h2>Туберкулез</h2>
+        <ul>
+            {% for filename in results["Туберкулез"] %}
+                <li>{{ filename }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="result">
+        <h2>Здоровые</h2>
+        <ul>
+            {% for filename in results["Здоровые"] %}
+                <li>{{ filename }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="/">Back to Upload</a>
+</body>
+</html>

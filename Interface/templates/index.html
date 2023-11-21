@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>X-ray Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="Header" >X-ray Classification</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" multiple>
+        <input type="submit" value="Classify">
+    </form>
+</body>
+</html>
